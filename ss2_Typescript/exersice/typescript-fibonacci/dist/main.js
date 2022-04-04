@@ -1,10 +1,10 @@
 let count = 0;
-for (let i = 1; count < 30; i++) {
-    let sum = 0;
+let sum = 0;
+for (let i = 0; count < 10; i++) {
     sum += fibonacci(i);
     count++;
-    console.log("Tổng của ", count, " số fibonacci là: ", sum);
 }
+console.log("Số fibonacci thứ ", count, " có tổng số fibonacci là:", sum);
 function fibonacci(num) {
     if (num == 0) {
         return num;
