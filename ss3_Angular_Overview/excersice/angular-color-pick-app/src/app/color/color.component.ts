@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-color',
@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColorComponent implements OnInit {
 
-  // tslint:disable-next-line:ban-types
-  color: String = '';
+  color: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-
+  // click(value) {
+  //   this.color = value.target.style.color;
+  // }
+  click($event: MouseEvent) {
+    this.color = $event.target.value;
+  }
 }
