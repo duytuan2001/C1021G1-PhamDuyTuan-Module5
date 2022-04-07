@@ -11,7 +11,7 @@
       "email": "thihao07@gmail.com",
       "address": "23 Nguyễn Hoàng, Đà Nẵng",
       "customerType": {
-        "id": 4,
+        "id": 5,
         "name": "Member"
       }
     },
@@ -26,7 +26,7 @@
       "email": "xuandieu92@gmail.com",
       "address": "K77/22 Thái Phiên, Quảng Trị",
       "customerType": {
-        "id": 2,
+        "id": 3,
         "name": "Gold"
       }
     },
@@ -71,8 +71,8 @@
       "email": "nhinhi123@gmail.com",
       "address": "242 Lý Thái Tổ, Gia Lai",
       "customerType": {
-        "id": 1,
-        "name": "Diamond"
+        "id": 4,
+        "name": "Silver"
       }
     },
     {
@@ -86,8 +86,8 @@
       "email": "tonnuchau@gmail.com",
       "address": "37 Yên Thế, Đà Nẵng",
       "customerType": {
-        "id": 1,
-        "name": "Diamond"
+        "id": 4,
+        "name": "Silver"
       }
     },
     {
@@ -100,8 +100,9 @@
       "phone": "0912345698",
       "email": "kimcuong84@gmail.com",
       "address": "K123/45 Lê Lợi, Hồ Chí Minh",
-      "customerType":   {  "id": 1,
-      "name": "Diamond"
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
       }
     },
     {
@@ -114,10 +115,10 @@
       "phone": "0763212345",
       "email": "haohao99@gmail.com",
       "address": "55 Nguyễn Văn Linh, Kom Tum",
-      "customerType": "CustomerTypeDao.CustomerTypes"
-    [
-      2
-    ]
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      }
     },
     {
       "id": 9,
@@ -129,10 +130,10 @@
       "phone": "0643343433",
       "email": "danhhai99@gmail.com",
       "address": "24 Lý Thường Kiệt, Quảng Ngãi",
-      "customerType": "CustomerTypeDao.CustomerTypes"
-    [
-      0
-    ]
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
     },
     {
       "id": 10,
@@ -144,10 +145,32 @@
       "phone": "0987654321",
       "email": "dactam@gmail.com",
       "address": "22 Ngô Quyền, Đà Nẵng",
-      "customerType": "CustomerTypeDao.CustomerTypes[1]"
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      }
+    }
+  ],
+  "CustomerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
     }
   ]
-}
-
-]
 }

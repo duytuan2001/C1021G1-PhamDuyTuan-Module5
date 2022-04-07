@@ -6,8 +6,8 @@ import {UpdateCustomerComponent} from './customer/update-customer/update-custome
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home'  },
-  { path: 'home', component: NavigationComponent },
+  { path: '', pathMatch: 'full', redirectTo: ''  },
+  { path: '', component: NavigationComponent },
   { path: 'customer', component: ListCustomerComponent },
   { path: 'customer-update/:id', component: UpdateCustomerComponent },
 ];

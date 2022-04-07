@@ -2,7 +2,8 @@
 <table class="table table-bordered table-hover">
   <thead>
   <tr>
-    <th>Id</th>
+    <th>STT</th>
+    <th>Code</th>
     <th>Name</th>
     <th>birthday</th>
     <th>gender</th>
@@ -17,6 +18,7 @@
   <tbody>
   <tr *ngFor="let customer of customers">
     <td>{{customer.id}}</td>
+    <td>{{customer.code}}</td>
     <td>{{customer.name | titlecase}}</td>
     <td>{{customer.birthday}}</td>
     <td *ngIf="customer.gender">Nam</td>
@@ -29,7 +31,7 @@
     <td>{{customer.customerType.name}}</td>
     <td>
       <a class="m-2 btn btn-warning">Detail</a>
-      <a [routerLink]="['/update-customer', customer.id]" class="m-2 btn btn-success">Edit</a>
+      <a [routerLink]="['update', customer.id]" class="m-2 btn btn-success">Edit</a>
       <a class="m-2 btn btn-danger">Delete</a>
     </td>
   </tr>
