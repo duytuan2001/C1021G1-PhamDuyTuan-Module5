@@ -7,7 +7,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {FormsModule} from '@angular/forms';
-import { ListEmployeeComponent } from './employee/list-employee/list-employee.component';
+import { ListCustomerComponent } from './customer/list-customer/list-customer.component';
+import {RouterModule} from '@angular/router';
+import { UpdateCustomerComponent } from './customer/update-customer/update-customer.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +19,15 @@ import { ListEmployeeComponent } from './employee/list-employee/list-employee.co
     HeaderComponent,
     FooterComponent,
     NavigationComponent,
-    ListEmployeeComponent
+    ListCustomerComponent,
+    UpdateCustomerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    RouterModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

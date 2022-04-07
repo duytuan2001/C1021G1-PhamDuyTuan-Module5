@@ -6,7 +6,7 @@ for (let i = 0; count < 10; i++) {
     count++;
 
 }
-console.log( "Số fibonacci thứ ", count , " có tổng số fibonacci là:", sum );
+console.log( "Số fibonacci thứ  ", count , " có tổng số fibonacci là:", sum );
 
 function fibonacci(num: number): number {
     if (num == 0) {

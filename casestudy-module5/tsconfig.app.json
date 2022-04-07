@@ -6,7 +6,9 @@
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts"
+    "src/polyfills.ts",
+    "src/app/customer/model/Customer.ts",
+    "src/app/customer/model/CustomerType.ts"
   ],
   "include": [
     "src/**/*.d.ts"

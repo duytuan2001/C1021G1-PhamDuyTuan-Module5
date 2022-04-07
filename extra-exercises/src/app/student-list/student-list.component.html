@@ -1,0 +1,32 @@
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Age</th>
+    <th>Mark</th>
+    <th>Result</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of students">
+    <td>{{student.id}}</td>
+    <td [style.color]="colorRow">{{student.name | titlecase}}</td>
+    <td>{{student.address}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.mark}}</td>
+    <td *ngIf="student.mark <= 6 ; else elseBlock" class="text-danger">Fail</td>
+    <ng-template #elseBlock>
+      <td class="text-success">Pass</td>
+    </ng-template>
+    <td>
+      <button (click)="getDetail(value)"  class="m-2 btn btn-warning">Detail</button>
+      <a class="m-2 btn btn-success">Edit</a>
+      <a class="m-2 btn btn-danger">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
