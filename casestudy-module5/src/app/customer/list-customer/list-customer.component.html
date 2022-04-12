@@ -1,0 +1,41 @@
+<h2 style="text-align: center">List Customer</h2>
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Code</th>
+    <th>Name</th>
+    <th>birthday</th>
+    <th>gender</th>
+    <th>IdCard</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>CustomerType</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of customers | paginate: {itemsPerPage: 5, currentPage: p}, index as i   ">
+    <td>{{customer.customerId}}</td>
+    <td>{{customer.customerCode}}</td>
+    <td>{{customer.customerName | titlecase}}</td>
+    <td>{{customer.customerBirthday}}</td>
+    <td *ngIf="customer.customerGender">Nam</td>
+    <td *ngIf="!customer.customerGender">Nữ</td>
+    <td *ngIf="customer.customerGender == null">Other</td>
+    <td>{{customer.customerIdCard}}</td>
+    <td>{{customer.customerPhone}}</td>
+    <td>{{customer.customerEmail}}</td>
+    <td>{{customer.customerAddress}}</td>
+    <td>{{customer.customerType.customerTypeName}}</td>
+    <td>
+      <a class="m-2 btn btn-warning">Detail</a>
+      <a class="m-2 btn btn-success">Edit</a>
+      <a class="m-2 btn btn-danger">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<pagination-controls  previousLabel="quay lai"
+                      nextLabel="di toi" class="text-end" (pageChange)="p = $event"></pagination-controls>

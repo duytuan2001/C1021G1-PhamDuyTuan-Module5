@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class APIService {
-  private readonly API_URL = 'http://localhost:3000/CustomerList';
+  private readonly API_URL = 'http://localhost:8080/customer/api/v1';
 
 
   constructor(private http: HttpClient) {

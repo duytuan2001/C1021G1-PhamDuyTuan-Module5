@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CaseStudy-Module5": {
+    "casestudy-module5": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/CaseStudy-Module5",
+            "outputPath": "dist/casestudy-module5",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "CaseStudy-Module5:build"
+            "browserTarget": "casestudy-module5:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "CaseStudy-Module5:build:production"
+              "browserTarget": "casestudy-module5:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CaseStudy-Module5:build"
+            "browserTarget": "casestudy-module5:build"
           }
         },
         "test": {
@@ -110,19 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "CaseStudy-Module5:serve"
+            "devServerTarget": "casestudy-module5:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "CaseStudy-Module5:serve:production"
+              "devServerTarget": "casestudy-module5:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "CaseStudy-Module5",
+  "defaultProject": "casestudy-module5",
   "cli": {
-    "analytics": "9f92c8fe-1362-40e2-af4a-5c3d43c5a13f"
+    "analytics": "35b10b4d-272c-4e3a-8fb3-3f2eb1654ef4"
   }
 }

@@ -1,1 +1,62 @@
-<p>create-customer works!</p>
+<!--<h2>Edit Customer</h2>-->
+<!--<form [formGroup]="customerForm" (ngSubmit)="createCustomer()" class="row g-3 container">-->
+<!--  <div class="col-md-6 form-group">-->
+<!--    <label hidden class="form-label">Id</label>-->
+<!--    <input hidden type="text" class="form-control" name="id">-->
+<!--  </div>-->
+
+<!--  <div>-->
+<!--    <label class="form-label">Code</label>-->
+<!--    <input type="text" class="form-control"-->
+<!--           name="code"-->
+<!--           formControlName="code">-->
+<!--    <div *ngIf="customerForm.get('code')?.invalid-->
+<!--        && customerForm.get('code')?.touched"-->
+<!--         style="color: red">-->
+<!--      Không được để trống-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="col-md-6 form-group">-->
+<!--    <label for="inputAge" class="form-label">Age</label>-->
+<!--    <input type="number" class="form-control" id="inputAge" formControlName="age">-->
+<!--  </div>-->
+<!--  <div class="col-12 form-group">-->
+<!--    <label for="inputAddress" class="form-label">Password</label>-->
+<!--    <input type="text" class="form-control" id="inputAddress" formControlName="password">-->
+<!--  </div>-->
+<!--  <div class="col-12 form-group">-->
+<!--    <label for="inputAddress2" class="form-label">Confirm Password</label>-->
+<!--    <input type="text" class="form-control" id="inputAddress2" formControlName="checkPassword">-->
+<!--  </div>-->
+<!--  <label>Gender</label>-->
+<!--  <div  class="form-check form-check-inline form-group">-->
+<!--    <input class="form-check-input" type="radio" name="inlineRadioOptions"  value="option1">-->
+<!--    <label class="form-check-label" formControlName="radio1">Nam</label>-->
+<!--  </div>-->
+<!--  <div class="form-check form-check-inline form-group">-->
+<!--    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2">-->
+<!--    <label class="form-check-label"  formControlName="radio2">Nữ</label>-->
+<!--  </div>-->
+<!--  <div class="form-check form-check-inline form-group">-->
+<!--    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2">-->
+<!--    <label class="form-check-label" formControlName="radio3">LGBT</label>-->
+<!--  </div>-->
+
+<!--&lt;!&ndash;  <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;    <label for="country" class="form-label">Country</label>&ndash;&gt;-->
+<!--&lt;!&ndash;    <select id="country" class="form-select" formControlName="country">&ndash;&gt;-->
+<!--&lt;!&ndash;      <option disabled selected value="">Chon</option>&ndash;&gt;-->
+<!--&lt;!&ndash;      &lt;!&ndash;      <option [ngValue]="r.id" *ngFor="let r of registerList">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      <option [ngValue]="item.id" *ngFor="let item of registerList">&ndash;&gt;-->
+<!--&lt;!&ndash;        {{item.name}}&ndash;&gt;-->
+<!--&lt;!&ndash;      </option>&ndash;&gt;-->
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--  <div class="col-md-2">-->
+<!--    <label for="inputZip" class="form-label">Phone</label>-->
+<!--    <input type="text" class="form-control" id="inputZip" placeholder="+84" formControlName="phone">-->
+<!--  </div>-->
+<!--  <div class="col-12">-->
+<!--    <button [disabled]="!customerForm.invalid"  type="submit" class="btn btn-primary">Đăng ký</button>-->
+<!--  </div>-->
+<!--</form>-->

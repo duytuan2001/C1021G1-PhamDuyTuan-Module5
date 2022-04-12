@@ -1,23 +1,23 @@
 export class CustomerTypeDao {
   public static CustomerTypes: ICustomerType[] = [{
-    id: 1,
-    name: 'Diamond'
+    customerTypeId: 1,
+    customerTypeName: 'Diamond'
   },
     {
-      id: 2,
-      name: 'Platinum'
+      customerTypeId: 2,
+      customerTypeName: 'Platinum'
     },
     {
-      id: 3,
-      name: 'Gold'
+      customerTypeId: 3,
+      customerTypeName: 'Gold'
     },
     {
-      id: 4,
-      name: 'Silver'
+      customerTypeId: 4,
+      customerTypeName: 'Silver'
     },
     {
-      id: 5,
-      name: 'Member'
+      customerTypeId: 5,
+      customerTypeName: 'Member'
     },
   ];
 }
