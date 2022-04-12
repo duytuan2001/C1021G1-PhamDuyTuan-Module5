@@ -1,45 +1,56 @@
-<form class="row g-3 container">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
+<form [formGroup]="registerForm" (ngSubmit)="createForm()" class="row g-3 container">
+  <div class="col-md-6 form-group">
+    <label class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4"
+           name="email"
+           formControlName="email">
+        <div *ngIf="registerForm.get('email')?.invalid
+        && registerForm.get('email')?.touched"
+             style="color: red">
+          Không được để trống
+        </div>
   </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Age</label>
-    <input type="password" class="form-control" id="inputPassword4">
+  <div class="col-md-6 form-group">
+    <label for="inputAge" class="form-label">Age</label>
+    <input type="number" class="form-control" id="inputAge" formControlName="age">
   </div>
-  <div class="col-12">
+  <div class="col-12 form-group">
     <label for="inputAddress" class="form-label">Password</label>
-    <input type="text" class="form-control" id="inputAddress" >
+    <input type="text" class="form-control" id="inputAddress" formControlName="password">
   </div>
-  <div class="col-12">
+  <div class="col-12 form-group">
     <label for="inputAddress2" class="form-label">Confirm Password</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" formControlName="checkPassword">
   </div>
-
-  Gender
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    <label class="form-check-label" for="inlineRadio1">1</label>
+  <label>Gender</label>
+  <div  class="form-check form-check-inline form-group">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions"  value="option1">
+    <label class="form-check-label" formControlName="radio1">Nam</label>
   </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    <label class="form-check-label" for="inlineRadio2">2</label>
+  <div class="form-check form-check-inline form-group">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2">
+    <label class="form-check-label"  formControlName="radio2">Nữ</label>
+  </div>
+  <div class="form-check form-check-inline form-group">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2">
+    <label class="form-check-label" formControlName="radio3">LGBT</label>
   </div>
 
   <div class="col-md-4">
-    <label for="inputState" class="form-label">Country</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
+    <label for="country" class="form-label">Country</label>
+    <select id="country" class="form-select" formControlName="country">
+      <option disabled selected value="">Chon</option>
+<!--      <option [ngValue]="r.id" *ngFor="let r of registerList">-->
+      <option [ngValue]="item.id" *ngFor="let item of registerList">
+        {{item.name}}
+      </option>
     </select>
   </div>
   <div class="col-md-2">
     <label for="inputZip" class="form-label">Phone</label>
-    <input type="text" class="form-control" id="inputZip">
+    <input type="text" class="form-control" id="inputZip" placeholder="+84" formControlName="phone">
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button [disabled]="!registerForm.invalid"  type="submit"  class="btn btn-primary">Đăng ký</button>
   </div>
 </form>
-
-
