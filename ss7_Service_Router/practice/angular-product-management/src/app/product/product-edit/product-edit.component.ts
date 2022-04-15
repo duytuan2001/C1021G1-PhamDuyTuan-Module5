@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ProductService} from '../../service/product.service';
+import {FormGroup} from '@angular/forms';
+import {Product} from '../../model/product';
 
 @Component({
   selector: 'app-product-edit',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-edit.component.css']
 })
 export class ProductEditComponent implements OnInit {
+  editProductForm: any;
 
-  constructor() { }
+  productService: Product[];
 
-  ngOnInit(): void {
+  constructor(private productService1: ProductService) {
   }
 
+  ngOnInit(): void {
+    // this.productService =
+  }
 }

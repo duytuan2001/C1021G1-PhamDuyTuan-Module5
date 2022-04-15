@@ -1,0 +1,9 @@
+<h4>Check Delete</h4>
+<hr>
+<p class="my-3">Are you sure you want to delete the product name
+  <span class="text-danger font-weight-bold">{{product.name}}</span>
+   ?<br>(Action cannot be undone)</p>
+<div class="row d-flex justify-content-end">
+  <button mat-dialog-close="" class="btn btn-warning mt-3">Cancel</button>
+  <button class="btn btn-danger mr-3" (click)="deleteProduct()">Delete</button>
+</div>

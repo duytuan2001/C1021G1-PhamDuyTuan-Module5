@@ -1,4 +1,4 @@
 interface ICustomerType {
-  customerTypeId: number;
-  customerTypeName: string;
+  id: number;
+  name: string;
 }

@@ -1,42 +1,36 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Product} from '../model/product';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor() { }
-  products: Product[] = [{
-    id: 1,
-    name: 'IPhone 12',
-    price: 2400000,
-    description: 'New'
-  }, {
-    id: 2,
-    name: 'IPhone 11',
-    price: 1560000,
-    description: 'Like new'
-  }, {
-    id: 3,
-    name: 'IPhone X',
-    price: 968000,
-    description: '97%'
-  }, {
-    id: 4,
-    name: 'IPhone 8',
-    price: 7540000,
-    description: '98%'
-  }, {
-    id: 5,
-    name: 'IPhone 11 Pro',
-    price: 1895000,
-    description: 'Like new'
-  }];
-  getAll() {
-    return this.products;
+  URL = 'http://localhost:3000/ProductList';
+
+  // tslint:disable-next-line:variable-name
+  constructor(private _http: HttpClient) {
   }
-  saveProduct(product) {
-    this.products.push(product);
+
+
+  getProductList() {
+    return this._http.get<Product[]>(this.URL);
+  }
+
+  createProduct(id: number) {
+    return this._http.get<Product[]>( `${this.URL}/${id}`);
+  }
+
+  findById(id) {
+    return this._http.get<Product>( `${this.URL}/${id}`);
+  }
+
+  updateProduct(id: number, data: Product) {
+
+  }
+
+  deleteProduct(id) {
+    return this._http.delete<Product[]>( `${this.URL}/${id}`);
   }
 }

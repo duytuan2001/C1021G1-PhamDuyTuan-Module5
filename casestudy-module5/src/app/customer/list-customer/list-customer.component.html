@@ -1,8 +1,23 @@
-<h2 style="text-align: center">List Customer</h2>
+<div style="background: #c8d6e5;">
+  <h2 style="text-align: center;">List Customer</h2>
+  <button routerLink="/customer/create" style="width: 200px; height: 50px; margin-top: 25px" type="button"
+          class="btn btn-primary">Create Customer
+  </button>
+
+  <div style="float: right;" class="box">
+    <span>Search By Name:</span>
+    <form class="sbox" action="" method="get">
+      <input class="stext" type="search" name="q" placeholder="Search..."
+             #element>
+      <button hidden class="sbutton" type="submit" (click)="searchByName(element.value)"></button>
+        <i  class="fa fa-search"></i>
+    </form>
+  </div>
+</div>
 <table class="table table-bordered table-hover">
   <thead>
   <tr>
-    <th>STT</th>
+    <!--    <th>STT</th>-->
     <th>Code</th>
     <th>Name</th>
     <th>birthday</th>
@@ -16,26 +31,25 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let customer of customers | paginate: {itemsPerPage: 5, currentPage: p}, index as i   ">
-    <td>{{customer.customerId}}</td>
-    <td>{{customer.customerCode}}</td>
-    <td>{{customer.customerName | titlecase}}</td>
-    <td>{{customer.customerBirthday}}</td>
-    <td *ngIf="customer.customerGender">Nam</td>
-    <td *ngIf="!customer.customerGender">Nữ</td>
-    <td *ngIf="customer.customerGender == null">Other</td>
-    <td>{{customer.customerIdCard}}</td>
-    <td>{{customer.customerPhone}}</td>
-    <td>{{customer.customerEmail}}</td>
-    <td>{{customer.customerAddress}}</td>
-    <td>{{customer.customerType.customerTypeName}}</td>
+  <tr *ngFor="let customer of customers | paginate: {itemsPerPage: 5, currentPage: p}">
+    <!--    <td>{{customer.id}}</td>-->
+    <td>{{customer.code}}</td>
+    <td>{{customer.name | titlecase}}</td>
+    <td>{{customer.birthday | date:"dd-MM-yyyy"}}</td>
+    <td>{{customer.gender ? 'Nam' : (customer.gender != null ? 'Nữ' : 'LGBT')}}</td>
+    <td>{{customer.idCard}}</td>
+    <td>{{customer.phone}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.address}}</td>
+    <td>{{customer.customerType.name}}</td>
     <td>
-      <a class="m-2 btn btn-warning">Detail</a>
-      <a class="m-2 btn btn-success">Edit</a>
-      <a class="m-2 btn btn-danger">Delete</a>
+      <a (click)="openDetailsDialog(customer.id)" class="m-2 btn btn-warning">Detail</a>
+      <a [routerLink]="['/customer/', customer.id]" class="m-2 btn btn-success">Edit</a>
+      <a (click)="openDeleteDialog(customer.id)" class="m-2 btn btn-danger">Delete</a>
     </td>
   </tr>
   </tbody>
 </table>
-<pagination-controls  previousLabel="quay lai"
-                      nextLabel="di toi" class="text-end" (pageChange)="p = $event"></pagination-controls>
+<div style="background-color: #c8d6e5;padding: 20px 0">
+  <pagination-controls class="text-end" (pageChange)="p = $event"></pagination-controls>
+</div>

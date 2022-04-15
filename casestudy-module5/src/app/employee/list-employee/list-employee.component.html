@@ -1,0 +1,56 @@
+<div style="background: #c8d6e5;">
+  <h2 style="text-align: center;">List Employee</h2>
+  <button routerLink="/customer/create" style="width: 200px; height: 50px; margin-top: 25px" type="button"
+          class="btn btn-primary">Create Customer
+  </button>
+
+  <div style="float: right;" class="box">
+    <span>Search By Name:</span>
+    <form class="sbox" action="" method="get">
+      <input class="stext" type="search" name="q" placeholder="Search..."
+             #element>
+      <button hidden class="sbutton" type="submit"></button>
+      <i class="fa fa-search"></i>
+    </form>
+  </div>
+</div>
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th>employeeName</th>
+    <th>employeeBirthday</th>
+    <th>employeeIdCard</th>
+    <th>employeeSalary</th>
+    <th>employeePhone</th>
+    <th>employeeEmail</th>
+    <th>employeeAddress</th>
+    <th>position</th>
+    <th>educationDegree</th>
+    <th>division</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employees | paginate: {itemsPerPage: 5, currentPage: p}">
+    <!--    <td>{{customer.id}}</td>-->
+    <td>{{employee.employeeName}}</td>
+    <td>{{employee.employeeBirthday}}</td>
+    <td>{{employee.employeeIdCard}}</td>
+    <td>{{employee.employeeSalary}}</td>
+    <td>{{employee.employeePhone}}</td>
+    <td>{{employee.employeeEmail}}</td>
+    <td>{{employee.employeeAddress}}</td>
+    <td>{{employee.position.positionName}}</td>
+    <td>{{employee.educationDegree.educationDegreeName}}</td>
+    <td>{{employee.division.divisionName}}</td>
+    <td>
+      <a (click)="openDetailsDialog(employee.employeeId)" class="m-2 btn btn-warning">Detail</a>
+      <a [routerLink]="['/customer/', employee.employeeId]" class="m-2 btn btn-success">Edit</a>
+      <a (click)="openDeleteDialog(employee.employeeId)" class="m-2 btn btn-danger">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<div style="background-color: #c8d6e5;padding: 20px 0">
+  <pagination-controls class="text-end" (pageChange)="p = $event"></pagination-controls>
+</div>

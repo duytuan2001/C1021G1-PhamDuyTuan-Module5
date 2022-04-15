@@ -1,0 +1,52 @@
+<div class="container sticky-top">
+  <h1>Details Customer</h1>
+  <p></p>
+  <hr>
+  <table class="table table-bordered table-hover">
+    <thead></thead>
+    <tbody>
+    <tr>
+      <th>Customer Code:</th>
+      <td class="text-center">{{customer.code}}</td>
+    </tr>
+    <tr>
+      <th>Name Customer:</th>
+      <td class="text-center">{{customer.name}}</td>
+    </tr>
+    <tr>
+      <th>Birthday:</th>
+      <td class="text-center">{{customer.birthday}}</td>
+    </tr>
+    <tr>
+      <th>Gender:</th>
+      <td class="text-center">{{customer.gender ? 'Nam' : (customer.gender != null ? 'Nữ' : 'LGBT')}}</td>
+    </tr>
+    <tr>
+      <th>IdCard:</th>
+      <td class="text-center">{{customer.idCard}}</td>
+    </tr>
+    <tr>
+      <th>Number Phone:</th>
+      <td class="text-center">{{customer.phone}}</td>
+    </tr>
+    <tr>
+      <th>Email:</th>
+      <td class="text-center">{{customer.email}}</td>
+    </tr>
+    <tr>
+      <th>Address:</th>
+      <td class="text-center">{{customer.address}}</td>
+    </tr>
+    <tr>
+      <th>CustomerType:</th>
+      <td class="text-center">{{customer.customerType.name}}</td>
+    </tr>
+    <tr>
+  <td style="text-align: center" colspan="2">
+    <button mat-dialog-close="" type="submit" class="m-3 btn btn-primary">Cancel</button>
+    <button type="submit" class="m-3 btn btn-danger" (click)="deleteCustomer()">Delete</button>
+  </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
